@@ -2,7 +2,7 @@ html, body {
     margin: 0%;
     padding: 0%;
     width: 100%;
-    background: #0f0f00;
+    background: #36A9E1;
     font-family: "Montserrat";
     overflow-x: hidden;
 }
@@ -13,6 +13,10 @@ html, body {
 @font-face {
     font-family: Mon-light;
     src: url(/fonts/Montserrat-Thin.ttf);
+}
+@font-face {
+    font-family: Mon-Bold;
+    src: url(/fonts/Montserrat-Bold.ttf);
 }
 .carrousel-contain{
     margin-top: 100px;
@@ -77,7 +81,7 @@ button:hover{
     height: 82vh;
     width: 5%;
     left: 0%;
-    background: #0f0f0f;
+    background: #36A9E1;
 }
 
 .block-2 {
@@ -86,7 +90,7 @@ button:hover{
     height: 82vh;
     width: 25%;
     left: 25%;
-    background: #0f0f0f;
+    background: #36A9E1;
 }
 
 .block-3 {
@@ -95,7 +99,7 @@ button:hover{
     height: 82vh;
     width: 5%;
     right: 0%;
-    background: #0f0f0f;
+    background: #36A9E1;
 }
 
 .overlay {
