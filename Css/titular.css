@@ -1,0 +1,159 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(/fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+    font-family: Mon-light;
+    src: url(/fonts/Montserrat-Thin.ttf);
+}
+.Titular-1{
+    display: flex;
+    flex-direction: row;
+    margin: 30%;
+    margin-top: 10%;
+    margin-bottom: 200px;
+    align-items: center;
+    justify-content: center;
+}
+.textos-titular-sub h2{
+    color: #efefef;
+    width: 40vw;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing:5px;
+}
+.textos-titular-sub p{
+    color: #efefef;
+    font-weight: lighter;
+    width: 40vw;
+    font-size: 26px;
+}
+.separador-vertical{
+    min-width: 10px;
+    margin: 0 10%;
+    height: 150px;
+    background-color: #efefef;
+}
+.Logo-titular{
+}
+
+
+
+.separador{
+	font-size: 4vw;
+	background:transparent !important;
+	color: #efefef;
+	text-align: center;
+	margin: 10% 0;
+}
+
+
+
+
+.footer {
+    padding-block: 100px;
+    color: #efefef;
+  }
+  
+  .footer__container {
+    margin: auto;
+    padding: 0 1.5rem;
+  }
+  
+  .footer__top {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    row-gap: 2rem;
+  }
+  
+  .footer__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-size: 30px;
+  }
+  
+  .footer__list-item {
+    list-style: none;
+  }
+  
+  .footer__list-link {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.25s;
+  }
+  
+  .footer__list-link:hover {
+    color: #2FB7DB;
+  }
+  
+  .company__info {
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .company__description{
+    font-size: 20px;
+  }
+  
+  .imgFooter{
+    color: #F8FAFA;
+    width: 10vw;
+  }
+  
+  .company__info ul {
+    flex-direction: row;
+  }
+  
+  .copyright {
+    margin-top: auto;
+    font-size: 14px;
+  }
+  
+  
+  @media screen and (min-width: 40em) {
+    .company__info {
+      grid-column: span 2;
+    }
+  }
+
+  @media(max-width: 990px) {
+    .imgFooter{
+        width: 22vw;
+    }
+
+  }
+
+  @media(max-width: 990px) {
+    .Titular-1 {
+        flex-direction: column;
+        margin: 0;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .textos-titular-sub h2 {
+        font-size: 20px;
+    }
+
+    .textos-titular-sub p {
+        font-size: 16px;
+        width: 85vw;
+    }
+
+    .separador-vertical {
+        display: none;
+    }
+    .Logo-titular{
+        width: 80vw;
+        margin: 120px 0px;
+    }
+    .separador{
+      font-size: 28px;
+      margin: 100px 0;
+    }
+    .cards-title{
+      margin: 0;
+    }
+}
