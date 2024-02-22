@@ -1,0 +1,58 @@
+.bienvenida{
+    height: 100vh;
+    font-size: 28px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content:end;
+    color: #efefef;
+    background-image: url("/IMG/fotos/SOMOS\ \(1\).svg");
+}
+.bienvenida-textos{
+    margin-left: 6%;
+    margin-bottom: 4%;
+}
+
+.bienvenida-titulo{
+    font-weight:lighter;
+    margin: 0;
+}
+.bienvenida-hello{
+    margin: 1em 0;
+    font-weight: lighter;
+    font-size: .8em;
+}
+.bienvenida-since{
+    margin: 1em 0;
+    font-weight: lighter;
+    font-size: .8em;
+}
+
+.bienvenida-upper{
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.bienvenida-flechas {
+    height: 600px;
+    position: absolute;
+    top: 24%;
+    right: 6%;
+}
+
+@keyframes girarFlechas {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.bienvenida-path {
+    animation: girarFlechas 2s ease-in-out forwards;
+}

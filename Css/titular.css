@@ -7,23 +7,24 @@
     src: url(/fonts/Montserrat-Thin.ttf);
 }
 .Titular-1{
+  background-color: #efefef;
     display: flex;
+    width: 100vw;
+    height: 500px;
     flex-direction: row;
-    margin: 30%;
-    margin-top: 10%;
-    margin-bottom: 200px;
+    margin-top: 100px;
     align-items: center;
     justify-content: center;
 }
 .textos-titular-sub h2{
-    color: #efefef;
+    color: #0f0f0f;
     width: 40vw;
     font-size: 25px;
     font-weight: bold;
     letter-spacing:5px;
 }
 .textos-titular-sub p{
-    color: #efefef;
+    color: #0f0f0f;
     font-weight: lighter;
     width: 40vw;
     font-size: 26px;
@@ -32,7 +33,8 @@
     min-width: 10px;
     margin: 0 10%;
     height: 150px;
-    background-color: #efefef;
+    background-color: #0f0f0f;
+    opacity: .2;
 }
 .Logo-titular{
 }
@@ -127,8 +129,10 @@
 
   @media(max-width: 990px) {
     .Titular-1 {
+      display: inline-flex;
+      width: 100vw;
         flex-direction: column;
-        margin: 0;
+        padding: 100px 0;
         align-items: center;
         justify-content: center;
     }
@@ -151,7 +155,7 @@
     }
     .separador{
       font-size: 28px;
-      margin: 100px 0;
+      padding: 100px 0;
     }
     .cards-title{
       margin: 0;
