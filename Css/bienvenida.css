@@ -43,20 +43,24 @@
 .bienvenida-flechas-1{
     top: 24%;
     right: 6%;
+    opacity: 1;
 }
 
 .bienvenida-flechas-2{
     top: 37%;
     right: 6%;
+    opacity: .70;
 }
 
 .bienvenida-flechas-3{
     top: 50%;
     right: 6%;
+    opacity: .50;
 }
 .bienvenida-flechas-4 {
     top: 63%;
     right: 6%;
+    opacity: .1;
 }
 
 .bienvenida-flechas{
@@ -64,4 +68,37 @@
     position: absolute;
     right: 0;
     top: 200px;
+}
+
+@media(max-width: 990px){
+    .bienvenida{
+        font-size: 18px;
+    }
+    .bienvenida-titulo{
+        width: 80%;
+    }
+    .bienvenida-flechas-1, .bienvenida-flechas-2, .bienvenida-flechas-3, .bienvenida-flechas-4 {
+        height: 70px;
+        position: absolute;
+    
+    }
+    .bienvenida-flechas-1{
+        top: 24%;
+        right: 6%;
+    }
+    
+    .bienvenida-flechas-2{
+        top: 30%;
+        right: 6%;
+    }
+    
+    .bienvenida-flechas-3{
+        top: 36%;
+        right: 6%;
+    }
+    .bienvenida-flechas-4 {
+        top: 42%;
+        right: 6%;
+    }
+    
 }

@@ -169,12 +169,18 @@ span{
     }
 
     .text-slider-wrapper {
-          position: relative;
-          top: 50% !important;
+          position: absolute;
+          top: 150vh;
     }
 
     .slider-control {
+        top: calc(160vh + 200px);
           left: 10%;
+    }
+    .text-slider {
+        margin: 100px 0 0 0;
+        padding: 0%;
+
     }
 }
 

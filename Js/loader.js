@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
 
     loaderImage.animate(keyframes, {
-        duration: 1400,
+        duration: 1000,
         iterations: Infinity
     });
 });
