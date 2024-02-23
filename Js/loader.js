@@ -1,5 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // List of image and gif URLs to preload
+document.addEventListener("DOMContentLoaded", function () {
     const resourcesToLoad = [
         "/IMG/fotos/072a2371-209a-4c63-b9c0-69bb9cc94981.jpg",
         "/IMG/fotos/f9be799c-7f85-45bf-952a-7da022147bfd.jpg",
@@ -10,37 +9,66 @@ document.addEventListener("DOMContentLoaded", function() {
         "https://i.pinimg.com/originals/d2/1a/4b/d21a4b636e92277873e8f8870777be06.gif"
     ];
 
+    const loaderWrapper = document.getElementById("loader-wrapper");
+    const content = document.body;
+    const loaderImage = document.getElementById("loader-image");
+
     // Function to preload resources
-    function preloadResources() {
-        return Promise.all(resourcesToLoad.map(url => {
-            return new Promise((resolve, reject) => {
-                if (url.endsWith('.gif') || url.endsWith('.jpg')) {
-                    const img = new Image();
-                    img.src = url;
-                    img.onload = resolve;
-                    img.onerror = reject;
-                } else {
-                    const xhr = new XMLHttpRequest();
-                    xhr.open('GET', url, true);
-                    xhr.onload = resolve;
-                    xhr.onerror = reject;
-                    xhr.send();
-                }
-            });
-        }));
+    function preloadResource(url) {
+        return new Promise((resolve, reject) => {
+            const resource = url.endsWith('.gif') || url.endsWith('.jpg') ? new Image() : new XMLHttpRequest();
+
+            resource.onload = resolve;
+            resource.onerror = reject;
+
+            if (resource instanceof Image) {
+                resource.src = url;
+            } else if (resource instanceof XMLHttpRequest) {
+                resource.open('GET', url, true);
+                resource.send();
+            }
+        });
     }
 
     // Show loader
-    const loaderWrapper = document.getElementById("loader-wrapper");
-    const content = document.body;
     loaderWrapper.style.display = "flex";
-    content.style.display = "none";
 
-    // Load resources with a minimum display time of 3 seconds
-    Promise.all([preloadResources(), new Promise(resolve => setTimeout(resolve, 3000))])
+    // Load resources
+    const loadResourcesPromise = Promise.all(resourcesToLoad.map(preloadResource));
+
+    // Ensure a minimum display time of 3 seconds
+    const minDisplayTimePromise = new Promise(resolve => setTimeout(resolve, 1000));
+
+    // When both resource loading and minimum display time are complete
+    Promise.all([loadResourcesPromise, minDisplayTimePromise])
         .then(() => {
-            // Hide loader and show content after resources are loaded
+            // Hide loader after resources are loaded and minimum display time has passed
             loaderWrapper.style.display = "none";
+
+            // Display content
             content.style.display = "block";
+        })
+        .catch((error) => {
+            console.error("Error loading resources:", error);
+
+            // Even if there's an error, ensure the loader is hidden
+            loaderWrapper.style.display = "none";
         });
+
+    // Apply opacity animation to loader image
+    loaderImage.style.animation = "fadeIn 3s ease-out, repeatOpacity 3s infinite";
+
+    // Animation to repeat opacity every 3 seconds
+    const keyframes = [
+        { opacity: 1 },
+        { opacity: 0 },
+        { opacity: 1 }
+    ];
+
+    loaderImage.animate(keyframes, {
+        duration: 1400,
+        iterations: Infinity
+    });
 });
+
+
