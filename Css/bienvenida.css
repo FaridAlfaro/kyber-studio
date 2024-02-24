@@ -73,31 +73,32 @@
 @media(max-width: 990px){
     .bienvenida{
         font-size: 18px;
+        height: 90vh;
     }
     .bienvenida-titulo{
         width: 80%;
     }
     .bienvenida-flechas-1, .bienvenida-flechas-2, .bienvenida-flechas-3, .bienvenida-flechas-4 {
-        height: 70px;
+        height: 7vh;
         position: absolute;
     
     }
     .bienvenida-flechas-1{
-        top: 24%;
+        top: 14%;
         right: 6%;
     }
     
     .bienvenida-flechas-2{
-        top: 30%;
+        top: calc(14% + 6vh);
         right: 6%;
     }
     
     .bienvenida-flechas-3{
-        top: 36%;
+        top: calc(14% + 12vh);
         right: 6%;
     }
     .bienvenida-flechas-4 {
-        top: 42%;
+        top: calc(14% + 18vh);
         right: 6%;
     }
     

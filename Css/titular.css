@@ -122,7 +122,10 @@
 
   @media(max-width: 990px) {
     .imgFooter{
-        width: 22vw;
+        width: 40%;
+    }
+    .company__description{
+      font-size: 14px;
     }
 
   }
