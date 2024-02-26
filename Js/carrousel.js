@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
             nav.style.backgroundColor = 'transparent';
         } else {
             // Si el usuario ha bajado, cambia el color de fondo a rojo con una transición suave
-            nav.style.backgroundColor = '#0f0f0f';
+            nav.style.backgroundColor = '#CBEDF6';
             nav.style.transition = 'background-color 0.3s ease'; // Ajusta la duración y la función de temporización según sea necesario
         }
     });

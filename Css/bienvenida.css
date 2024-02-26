@@ -6,8 +6,8 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content:end;
-    color: #efefef;
-    background-image: url("/IMG/fotos/SOMOS\ \(1\).svg");
+    color: #092A34;
+    background-color: #CBEDF6;
     margin-bottom: 200px;
 }
 .bienvenida-textos{
@@ -38,12 +38,14 @@
 .bienvenida-flechas-1, .bienvenida-flechas-2, .bienvenida-flechas-3, .bienvenida-flechas-4 {
     height: 120px;
     position: absolute;
+    color: red;
 
 }
 .bienvenida-flechas-1{
     top: 24%;
     right: 6%;
     opacity: 1;
+
 }
 
 .bienvenida-flechas-2{

@@ -2,7 +2,7 @@ html, body {
     margin: 0%;
     padding: 0%;
     width: 100%;
-    background: #0f0f0f;
+    background: #092A34;
     font-family: "Montserrat";
     overflow-x: hidden;
 }
@@ -51,10 +51,10 @@ html, body {
 
 button {
     cursor: pointer;
-    color: #efefef;
+    color: #CBEDF6;
     background: none;
     padding: 24px;
-    border: .3vh solid #efefef;
+    border: .3vh solid #CBEDF6;
     font-size: 16px;
     border-radius: 50%;
     display: flex;
@@ -66,8 +66,8 @@ button:focus {
     outline: none;
 }
 button:hover{
-    background-color: #efefef;
-    color: #0f0f0f;
+    background-color: #CBEDF6;
+    color: #092A34;
     transition: ease-in-out .4s;
 }
 
@@ -77,7 +77,7 @@ button:hover{
     height: 82vh;
     width: 5%;
     left: 0%;
-    background: #0f0f0f;
+    background: #092A34;
 }
 
 .block-2 {
@@ -86,7 +86,7 @@ button:hover{
     height: 82vh;
     width: 25%;
     left: 25%;
-    background: #0f0f0f;
+    background: #092A34;
 }
 
 .block-3 {
@@ -95,7 +95,7 @@ button:hover{
     height: 82vh;
     width: 5%;
     right: 0%;
-    background: #0f0f0f;
+    background: #092A34;
 }
 
 .overlay {
