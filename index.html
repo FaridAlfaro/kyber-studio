@@ -19,6 +19,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
     <link rel="stylesheet" href="./Css/header.css">
     <title>Document</title>
     <link rel="stylesheet" href="./Css/loader.css">
@@ -265,6 +266,23 @@
                 <p>Somos un estudio creativo independiente especializado en Diseño Web, Tiendas Online, Branding, Social Media, Email Marketing y Diseño Gráfico.</p>   
             </div>
         </div>
+        <model-viewer id="tuModelo" src="./IMG/logos peregrino/OBJ/Recurso 2.gltf" alt="Descripción del modelo" camera-controls camera-orbit="0deg 90deg 2m"></model-viewer>
+
+  <!-- Script para activar la rotación automática -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Busca el elemento model-viewer
+      var modeloViewer = document.getElementById('tuModelo');
+      
+      // Verifica que se haya encontrado el modelo
+      if (modeloViewer) {
+        // Activa la rotación automática
+        modeloViewer.addEventListener('load', function() {
+          modeloViewer.play();
+        });
+      }
+    });
+  </script>
         <link rel="stylesheet" href="./Css/titular.css">
     </section>
     <section class="cards-section">

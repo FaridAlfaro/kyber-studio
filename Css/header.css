@@ -1,8 +1,8 @@
 
 .wrap {
 	position: fixed;
-	right: 5%;
-	top: 90vh;
+	right: 14px;
+	bottom: 14px;
 	text-align: center;
 	opacity: 0;
 	transition: opacity 0.5s ease
@@ -22,7 +22,7 @@
     font-weight: normal;
   }
   .wrap li {
-	width: 64px;
+	width: 40px;
 	height: 64px;
 	color: #1D1D1B;
 	list-style: none;
@@ -33,8 +33,8 @@
   }
   .wrap li {
 	align-self: center;
-	width: 90px;
-	font-size: 13px;
+	width: calc(100vw / 5);
+	font-size: 11px;
 	cursor: pointer;
   }
   .wrap li:hover{
@@ -486,7 +486,12 @@
 	  nav {
 		display: none;
 	  }
+	  .logo-header{
+		height: 30px;
+		top: 1.2em;
+	  }
 	  header{
+		height: 60px;
 		  /* display: none; */
 	  }
 	}
