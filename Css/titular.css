@@ -1,13 +1,6 @@
-@font-face {
-    font-family: Montserrat;
-    src: url(/fonts/Montserrat-Regular.ttf);
-}
-@font-face {
-    font-family: Mon-light;
-    src: url(/fonts/Montserrat-Thin.ttf);
-}
+
 .Titular-1{
-  background-color: #CBEDF6;
+  background-color: #E0F2F9;
     display: flex;
     width: 100vw;
     height: 500px;
@@ -17,15 +10,15 @@
     justify-content: center;
 }
 .textos-titular-sub h2{
-    color: #092A34;
+    color: #1D1D1B;
     width: 40vw;
     font-size: 25px;
     font-weight: bold;
     letter-spacing:5px;
 }
 .textos-titular-sub p{
-    color: #092A34;
-    font-weight: lighter;
+    color: #1D1D1B;
+    font-weight: normal;
     width: 40vw;
     font-size: 26px;
 }
@@ -33,7 +26,7 @@
     min-width: 10px;
     margin: 0 10%;
     height: 150px;
-    background-color: #092A34;
+    background-color: #1D1D1B;
     opacity: .2;
 }
 .Logo-titular{
@@ -44,7 +37,9 @@
 .separador{
 	font-size: 4vw;
 	background:transparent !important;
-	color: #CBEDF6;
+  font-family: "IBM Plex Sans-Serif", sans-serif;
+  font-weight: bold;
+	color: #E0F2F9;
 	text-align: center;
 	margin: 10% 0;
 }
@@ -54,7 +49,7 @@
 
 .footer {
     padding-block: 100px;
-    color: #CBEDF6;
+    color: #E0F2F9;
   }
   
   .footer__container {

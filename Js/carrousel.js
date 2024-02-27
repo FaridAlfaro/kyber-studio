@@ -23,22 +23,3 @@ var sickSecondary = {
 
 $('.image-slider').slick(sickPrimary);
 $('.text-slider').slick(sickSecondary);
-
-
-document.addEventListener("DOMContentLoaded", function() {
-    var nav = document.querySelector('.menubar');
-    var initialOffset = nav.getBoundingClientRect().top + window.scrollY;
-
-    window.addEventListener('scroll', function() {
-        var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-
-        // Si el usuario se encuentra en la parte superior de la página
-        if (currentScroll <= initialOffset) {
-            nav.style.backgroundColor = 'transparent';
-        } else {
-            // Si el usuario ha bajado, cambia el color de fondo a rojo con una transición suave
-            nav.style.backgroundColor = '#CBEDF6';
-            nav.style.transition = 'background-color 0.3s ease'; // Ajusta la duración y la función de temporización según sea necesario
-        }
-    });
-});

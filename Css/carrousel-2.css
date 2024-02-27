@@ -167,26 +167,26 @@
 .carousel__icon {
     display: inline-block;
     vertical-align: middle;
-  fill: #CBEDF6;
+  fill: #E0F2F9;
 }
 .carousel__icon:hover{
-  fill: #092A34;
+  fill: #1D1D1B;
   transition: all .4s;
 }
 
 .carousel__arrow {
   cursor: pointer;
-    color: #CBEDF6;
+    color: #E0F2F9;
     background: none;
     padding: 24px 24px;
-    border: .3vh solid #CBEDF6;
+    border: .3vh solid #E0F2F9;
     font-size: 16px;
     border-radius: 50%;
     margin: .4em;
     display: inline-block;
 }
 .carousel__arrow:hover{
-  background-color: #CBEDF6;
+  background-color: #E0F2F9;
   transition: all .4s;
 }
 

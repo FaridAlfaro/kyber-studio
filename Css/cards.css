@@ -1,0 +1,117 @@
+.cards-section{
+}
+.container-cards {
+    max-width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 35px;
+    margin: 0 auto;
+    .card {
+      position: relative;
+      width: 300px;
+      height: 400px;
+      margin: 0 auto;
+      background-position:-150px -50px;
+      background: #1D1D1B;
+      border-radius: 15px;
+      box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
+
+      .face {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &.face1 {
+          box-sizing: border-box;
+          padding: 20px;
+
+          h2 {
+            margin: 0;
+            padding: 0;
+          }
+
+          .java {
+            font-family: "IBM Plex Serif", serif;
+            font-weight: normal;
+            background-color: #E0F2F9;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+
+        &.face2 {
+          transition: 0.5s;
+
+          h2 {
+            font-weight: normal;
+            margin: 0;
+            padding: 0px 15px;
+            font-size: 2em;
+            color: #E0F2F9;
+            transition: 0.5s;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+          }
+        }
+      }
+    }
+
+    .card:hover .face.face2 {
+      height: 60px;
+      h2 {
+        font-size: 2em;
+      }
+    }
+
+    .card:nth-child(1) .face.face2 { background:url("./IMG/fotos/SONIDO\ DE\ OTRO\ NIVEL\ \(5\).gif") no-repeat;
+      background-size:cover;
+      border-radius: 15px;
+      filter:brightness(50%);
+    }
+    .card:nth-child(2) .face.face2 { background:url("./IMG/fotos/SONIDO\ DE\ OTRO\ NIVEL\ \(3\)\ \(1\).gif") no-repeat;
+        background-size:cover;
+        background-position:0px -90px;
+        border-radius: 15px;
+        filter:brightness(50%);
+      }
+      .card:nth-child(3) .face.face2 { background:url("./IMG/fotos/SONIDO\ DE\ OTRO\ NIVEL\ \(1\)\ \(1\).gif") no-repeat;
+        background-size:cover;
+        background-position:0px -90px;
+        border-radius: 15px;
+        filter:brightness(50%);
+      }
+      .card:nth-child(4) .face.face2 { background:url("./IMG/fotos/SONIDO\ DE\ OTRO\ NIVEL\ \(2\)\ \(1\).gif") no-repeat;
+        background-size:cover;
+        border-radius: 15px;
+        filter:brightness(50%);
+      }
+      .card:nth-child(5) .face.face2 { background:url("./IMG/fotos/SONIDO\ DE\ OTRO\ NIVEL\ \(4\)\ \(1\).gif") no-repeat;
+        background-size:cover;
+        border-radius: 15px;
+        filter:brightness(50%);
+      }
+  }
+
+
+.navbar-left{
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    align-items: center;
+}
+
+.secondary-icons{
+  margin-right: 50px;
+}
+
+
+@media(max-width: 990px) {
+  .navbar-left {
+    display: none;
+  }
+}

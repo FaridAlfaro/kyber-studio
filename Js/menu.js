@@ -1,36 +1,5 @@
-var iconMenu = document.querySelector('.icon-menu'),
-    menu = document.querySelector('.menu'),
-    menuLink = document.querySelectorAll('.menu-link.sub');
-
-iconMenu.addEventListener('click', openMenu);
-
-menuLink.forEach(function(el) {
-  el.addEventListener('click', openSubmenu);
+var button = document.querySelector('button');
+var menu = document.querySelector('.menu');
+button.addEventListener('click', function() {
+  menu.classList.toggle('close');
 });
-
-function openMenu() {
-  if (menu.classList.contains('open')) {
-    menu.classList.add('close');
-    iconMenu.classList.remove('icon-closed');
-    document.body.classList.remove('scroll-enabled');
-
-    setTimeout(function () {
-      menu.classList.remove('open');
-    }, 1300);
-
-  } else {
-    menu.classList.remove('close');
-    menu.classList.add('open');
-    iconMenu.classList.add('icon-closed');
-    document.body.classList.add('scroll-enabled');
-  }
-}
-
-function openSubmenu(event) {
-  
-if (event.currentTarget.classList.contains("active")) {
-    event.currentTarget.classList.remove("active");
-  } else {
-    event.currentTarget.classList.add("active");
-  }
-}
