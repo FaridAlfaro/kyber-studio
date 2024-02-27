@@ -63,6 +63,53 @@ p{
 }
 
 
+.bienvenida-links {
+    position: absolute;
+    right: 10%;
+    top: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.bienvenida-link {
+    text-decoration: none;
+    color: #E0F2F9;
+    position: relative;
+}
+
+.bienvenida-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #E0F2F9;
+    transition: width 0.3s ease;
+}
+
+.bienvenida-link:hover::before {
+    width: 100%;
+}
+
+.bienvenida-link::after {
+    content: "➢";
+    scale: .7;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    margin-left: 5px;
+}
+
+.bienvenida-link:hover::after {
+    opacity: 1;
+}
+
+.bienvenida-link:hover {
+    transition: ease-in-out 1s;
+}
+
 @media(max-width: 990px){
     .peregrino-logo{
         width: 70vw;
@@ -99,6 +146,53 @@ p{
     .bienvenida-flechas-4 {
         top: calc(14% + 18vh);
         right: 6%;
+    }
+    .bienvenida-links {
+        position: absolute;
+        right: 10%;
+        top: 7%;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        z-index: 999999;
+    }
+    
+    .bienvenida-link {
+        text-decoration: none;
+        color: #E0F2F9;
+        position: relative;
+    }
+    
+    .bienvenida-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: #E0F2F9;
+        transition: width 0.3s ease;
+    }
+    
+    .bienvenida-link:hover::before {
+        width: 100%;
+    }
+    
+    .bienvenida-link::after {
+        content: "➢";
+        scale: .7;
+        position: absolute;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        margin-left: 5px;
+    }
+    
+    .bienvenida-link:hover::after {
+        opacity: 1;
+    }
+    
+    .bienvenida-link:hover {
+        transition: ease-in-out 1s;
     }
     
 }
