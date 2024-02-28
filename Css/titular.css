@@ -1,6 +1,5 @@
 
 .Titular-1{
-  background-color: #1D1D1B;
     display: flex;
     width: 100vw;
     height: 500px;
@@ -49,7 +48,7 @@
 
 .footer {
     padding-block: 100px;
-    color: #E0F2F9;
+    color: #1D1D1B;
   }
   
   .footer__container {

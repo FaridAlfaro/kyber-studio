@@ -18,7 +18,7 @@
   li h2{
 	margin: auto;
 	padding: 0;
-	font-family: "IBM Plex Sans-Serif", sans-serif;
+	font-family: "IBM Plex Sans", sans-serif;
     font-weight: normal;
   }
   .wrap li {
@@ -108,7 +108,7 @@
 	  flex-direction: row;
 	  align-items: center;
 	  justify-content: center;
-	  background-color: #1D1D1B;
+	  background-color: transparent;
 	  z-index: 99999;
   }
   
@@ -131,7 +131,7 @@
   
   
   nav {
-	  font-family: "IBM Sans-Serif", sans-serif;
+	  font-family: "IBM Plex Sans", sans-serif;
 	  width: var(--menu-width);
 	  display: flex;
 	  transform-style: preserve-3d;
@@ -191,7 +191,7 @@
 	  box-sizing: border-box;
 	  top: 3rem;
 	  border-radius: 10px;
-	  background: #E0F2F9;
+	  background: #1D1D1B;
 	  display: block;
 	  height: 300px;
 	  width: calc(var(--menu-width) * 1.5);
@@ -312,7 +312,7 @@
   /* Menu specific */
   .menu-item .title {
 	  font-weight: 500;
-	  color: rgb(44 70 86);
+	  color: #E0F2F9;
 	  margin: 0 0 0.25em 0;
   }
   
@@ -330,7 +330,7 @@
   }
   
   .menu-item .icon {
-	  color: rgb(44 70 86);
+	  color: #E0F2F9;
 	  font-size: 1.25em;
 	  margin: 0 1em 0 0;
   }
@@ -375,7 +375,7 @@
   }
   
   .menu-item .icon-box:hover .icon, .menu-item .icon-box:hover .title, .menu-item .icon-box:hover .sub-text {
-	  color: rgb(89 110 123);
+	  color: #E0F2F9;
   }
   
   #sub-menu-bottom {
@@ -394,8 +394,9 @@
   .bottom-container {
 	  grid-area: 4 / -3 / 4 / 3;
 	  padding-top: 1.5em;
-	  color: #3a5260;
+	  color: #2FB7DB;
 	  font-weight: 500;
+	  
   }
   
   .top-container {
@@ -405,11 +406,11 @@
   
   .bottom-container a {
 	  float: right;
-	  background: linear-gradient(90deg, #8ea4b166, #a3b5bf6b);
+	  border: solid #2FB7DB 1px;
 	  padding: 0.5em 1em;
 	  border-radius: 100px;
 	  position: absolute;
-	  color: #2c4655bf;
+	  color: #E0F2F9;
 	  font-weight: bold;
 	  text-decoration: none;
 	  right: 1.5em;
@@ -417,14 +418,15 @@
   }
   
   .bottom-container a:hover {
-	  background: linear-gradient(90deg, #8ea4b136, #a3b5bf33);
+	  background: #2FB7DB;
+	  transition: .3s ease;
   }
   
   .sub-menu h3 {
 	  font-size: 1em;
 	  text-transform: uppercase;
 	  letter-spacing: 0.5px;
-	  color: rgb(44 70 86 / 68%);
+	  color: #E0F2F9;
 	  margin: 0.75em 0;
   }
   
@@ -433,16 +435,20 @@
 	  float: left;
 	  font-size: 1em;
 	  line-height: 1.75em;
-	  color: #7a8a94;
+	  color: #9ea9af;
 	  text-decoration: none;
+	  font-family: "IBM Plex Sans", sans-serif;
+	  font-weight: bold;
   }
   
   .sub-menu .box a:hover {
-	  color: rgb(44 70 86);
+	  color: #E0F2F9;
   }
   
   .box {
 	  margin: 0 0 3em 0;
+	  font-family: "IBM Plex Sans", sans-serif;
+	  font-weight: bold;
   }
   
   .icon.big i {
