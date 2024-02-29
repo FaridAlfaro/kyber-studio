@@ -232,29 +232,51 @@
     <script src="/pruebas.js"></script>
   </div>
 </header>
-    <div class="content-container aos-init">
-    <section class="bienvenida">
-      <img src="./IMG/logos peregrino/SVG/Recurso 9.svg" alt="" class="peregrino-logo" data-aos="fade-right" data-aos-duration="2000">
+    <section class="content-container">
+      <div class="bienvenida " data-aos="fade-right"
+      data-aos-duration="2000">
+        <img src="./IMG/logos peregrino/SVG/Recurso 9.svg" alt="" class="peregrino-logo">
+        <div class="bienvenida-textos">
+          <h4 class="bienvenida-hello">¡Hello there!</h4>
+          <h1 class="bienvenida-titulo"><span class="bienvenida-upper">Resolvemos</span> problemas. <br>
+            Impulsamos <span class="bienvenida-upper">ideas</span>. <br>
+            Creamos soluciones
+            que <span class="bienvenida-upper">funcionan</span>.</h1>
+          <h4 class="bienvenida-since">_SINCE 2019</h4>
+        </div>
+        <link rel="stylesheet" href="./Css/bienvenida.css">
+      </div>
       <div class="bienvenida-links" data-aos="fade-left" data-aos-duration="2000">
-        <a href="#" class="bienvenida-link" visited>Nosotros</a>
-        <a href="#" class="bienvenida-link">Servicios</a>
-        <a href="#" class="bienvenida-link">Trabajos</a>
-        <a href="#" class="bienvenida-link">Contacto</a>
+        <a href="#" class="bienvenida-link" id="menuNosotros">Nosotros</a>
+        <a href="#" class="bienvenida-link" id="menuServicios">Servicios</a>
+        <a href="#" class="bienvenida-link" id="menuTrabajos">Trabajos</a>
+        <a href="#" class="bienvenida-link" id="menuContacto">Contacto</a>
       </div>
-      
-      <div class="bienvenida-textos" data-aos="fade-right" data-aos-duration="2000">
-        <h4 class="bienvenida-hello">¡Hello there!</h4>
-      <h1 class="bienvenida-titulo"><span class="bienvenida-upper">Resolvemos</span> problemas. <br>
-        Impulsamos <span class="bienvenida-upper">ideas</span>. <br>
-        Creamos soluciones
-        que <span class="bienvenida-upper">funcionan</span>.</h1>
-        <h4 class="bienvenida-since">_SINCE 2019</h4>
+      <div class="menu-bienvenida" id="menuBienvenida">
+        <span class="close-btn" data-menu-id="menuBienvenida">Cerrar</span>
+        <div class="menu-nosotros">
+            <h2>Un poco de historía</h2>
+            <p>peregrino nacio en medio de la etapa de mayor necesidad de servicios digitales y desde entonces nos hemos dedicado a brindar soluciones</p>
+            <a href="#" class="bienvenida-boton">Saber más</a>
+          </div>
+
+        <div class="menu-servicios">
+          <h2>Que podemos hacer por vos</h2>
+          <a href="#" class="bienvenida-boton">Saber más</a>
+        </div>
+
+        <div class="menu-trabajos">
+          <h2>Contenido del menú Bienvenida</h2>
+          <a href="#" class="bienvenida-boton">Saber más</a>
+        </div>
+
+        <div class="menu-contacto">
+          <h2>Contenido del menú Bienvenida</h2>
+          <a href="#" class="bienvenida-boton">Saber más</a>
+        </div>
+
       </div>
-      <div>
-      </div>
-      <link rel="stylesheet" href="./Css/bienvenida.css">
     </section>
-  </div>
     
     <section class="Titular-1">
       
