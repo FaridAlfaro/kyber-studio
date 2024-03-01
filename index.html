@@ -21,6 +21,7 @@
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
     <link rel="stylesheet" href="./Css/header.css">
+    <link rel="stylesheet" href="./Css/titular.css">
     <title>Document</title>
     <link rel="stylesheet" href="./Css/loader.css">
 </head>
@@ -255,13 +256,19 @@
       <div class="menu-bienvenida" id="menuBienvenida">
         <span class="close-btn" data-menu-id="menuBienvenida">Cerrar</span>
         <div class="menu-nosotros">
-            <h2>Un poco de historía</h2>
-            <p>peregrino nacio en medio de la etapa de mayor necesidad de servicios digitales y desde entonces nos hemos dedicado a brindar soluciones</p>
-            <a href="#" class="bienvenida-boton">Saber más</a>
+            <div class="nosotros-contenedor">
+              <h2 class="nosotros-titulo">Un lugar donde</h2>
+              <h2 class="nosotros-titulo2">arte, tecnología</h2>
+              <h2 class="nosotros-titulo3">y emociones</h2>
+              <h2 class="nosotros-titulo4">son uno solo</h2>
+          <p class="nosotros-texto">Somos un estudio de diseño boutique y desde 2019 ayudamos a nuestros clientes a encontrar soluciones para sus negocios, creando marcas únicas y productos digitales.</p>
+            </div>
+            <a href="#" class="bienvenida-boton nosotros-boton">Saber más</a>
+            <div class="nosotros-img"></div>
           </div>
 
         <div class="menu-servicios">
-          <h2>Que podemos hacer por vos</h2>
+          
           <a href="#" class="bienvenida-boton">Saber más</a>
         </div>
 
@@ -277,37 +284,7 @@
 
       </div>
     </section>
-    
-    <section class="Titular-1">
-      
-        <div><img src="./IMG/Recurso 27.svg" alt="" class="Logo-titular" data-aos="fade-right" data-aos-duration="2000"></div>
-        <div class="separador-vertical" data-aos="flip-left" data-aos-duration="1000"> </div>
-        <div class="textos-titular" data-aos="fade-left" data-aos-duration="1000">
-            <div class="textos-titular-sub">
-                <h2>Estudio</h2>
-                <p>Somos un estudio creativo independiente especializado en Diseño Web, Tiendas Online, Branding, Social Media, Email Marketing y Diseño Gráfico.</p>   
-            </div>
-        </div>
-        <model-viewer id="tuModelo" src="./IMG/logos peregrino/OBJ/Recurso 2.gltf" alt="Descripción del modelo" camera-controls camera-orbit="0deg 90deg 2m"></model-viewer>
-
-  <!-- Script para activar la rotación automática -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // Busca el elemento model-viewer
-      var modeloViewer = document.getElementById('tuModelo');
-      
-      // Verifica que se haya encontrado el modelo
-      if (modeloViewer) {
-        // Activa la rotación automática
-        modeloViewer.addEventListener('load', function() {
-          modeloViewer.play();
-        });
-      }
-    });
-  </script>
-        <link rel="stylesheet" href="./Css/titular.css">
-    </section>
-    <section class="cards-section">
+    <!-- <section class="cards-section">
       <h1 class="separador cards-title">Servicios</h1>
       <div class="container-cards">
         <div class="card"  data-aos="fade-up" data-aos-duration="1000" ata-aos-delay="1000">
@@ -455,8 +432,8 @@
           
         </div>
         <link rel="stylesheet" href="./Css/carrousel-2.css">
-     </section>
-     <footer class="footer">
+     </section> -->
+     <!-- <footer class="footer">
       <div class="footer__container">
         <div class="footer__top">
           <div class="company__info">
@@ -500,7 +477,8 @@
           </div>
         </div>
       </div>
-    </footer>
+    </footer> -->
+     <canvas></canvas>
         <script src="./Js/carousel-2.js"></script>
 </body>
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>

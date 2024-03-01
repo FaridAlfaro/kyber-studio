@@ -1,18 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="pruebas.css">
-</head>
-<body>        <script src="https://kit.fontawesome.com/628c8d2499.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
 
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" type="text/css" />
-  
-  <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae voluptates optio autem, ad a harum velit perferendis. Consectetur quam expedita alias temporibus quasi eos! Quae sit quam veritatis asperiores nam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores dolore sed repellendus in numquam aliquam quae, vel quos voluptatem fugit nihil vero repellat esse nostrum fugiat impedit, incidunt nam quas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quae vel architecto earum autem nobis, officia suscipit minima consequatur? Nisi minus amet nobis iusto. Pariatur dolorum reprehenderit doloremque cum reiciendis.</h1>
-    <img src="/IMG/fotos/6aa4df7a-fe40-4aa1-a3f2-db413af1a8f1.jpg" alt="">
+        #wormholeContainer {
+            width: 100vw;
+            height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+        }
+
+        #wormhole {
+            width: 150px;
+            height: 150px;
+        }
+
+        #entryCircle, #exitCircle {
+            fill: none;
+            stroke: white;
+            stroke-width: 2;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                r: 15;
+            }
+            50% {
+                r: 20;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wormholeContainer">
+        <svg id="wormhole" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <!-- Entry Circle -->
+            <circle id="entryCircle" cx="30" cy="50" r="15"/>
+            
+            <!-- Exit Circle -->
+            <circle id="exitCircle" cx="70" cy="50" r="15"/>
+        </svg>
+    </div>
 </body>
 </html>

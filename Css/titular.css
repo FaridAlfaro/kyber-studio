@@ -1,22 +1,84 @@
-
-.Titular-1{
-    display: flex;
-    width: 100vw;
-    height: 500px;
-    flex-direction: row;
-    margin-top: 100px;
-    align-items: center;
-    justify-content: center;
+.nosotros-contenedor{
+  margin-top: 1%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: -100px;
+  width: 100%;
+  height: 100%;
+  
 }
+.nosotros-titulo{
+ text-transform: uppercase;
+  font-size: 8vh;
+  font-weight: bold;
+  transition: color all .3s;
+  margin: 0;
+  margin-left: -30%;
+}
+.nosotros-titulo2{
+  text-transform: uppercase;
+   font-size: 8vh;
+   font-weight: bold;
+   transition: color all .3s;
+   margin: 0;
+   margin-left: 30%;
+   opacity: .5;
+ }
+ .nosotros-titulo3{
+  text-transform: uppercase;
+   font-size: 8vh;
+   font-weight: bold;
+   transition: color all .3s;
+   margin: 0;
+   margin-left: -20%;
+ }
+ .nosotros-titulo4{
+  text-transform: uppercase;
+   font-size: 8vh;
+   font-weight: bold;
+   transition: color all .3s;
+   margin: 0;
+   margin-left: 15%;
+   opacity: .5;
+ }
+ .nosotros-texto{
+  width: 30%;
+  position: absolute;
+  bottom: 30%;
+  left: 5%;
+  font-size: 30px;
+ }
+ .nosotros-img{
+  background-image: url(/IMG/fotos/wallpaperflare.com_wallpaper.jpg);
+  background-position: center;
+  background-clip: border-box;
+  background-position-y: -50%;
+  background-size: cover;
+  position: absolute;
+  right: 3%;
+  height: 30%;
+  width: 50%;
+  bottom: 4%;
+  border-radius: 14px;
+ }
+ .nosotros-boton{
+  left: 5%;
+  bottom: 25%;
+  font-size: 22px;
+ }
+/* 
+
 .textos-titular-sub h2{
-    color: #1D1D1B;
+    color: #000000;
     width: 40vw;
     font-size: 25px;
     font-weight: bold;
     letter-spacing:5px;
 }
 .textos-titular-sub p{
-    color: #1D1D1B;
+    color: #000000;
     font-weight: normal;
     width: 40vw;
     font-size: 26px;
@@ -25,7 +87,7 @@
     min-width: 10px;
     margin: 0 10%;
     height: 150px;
-    background-color: #1D1D1B;
+    background-color: #000000;
     opacity: .2;
 }
 .Logo-titular{
@@ -41,14 +103,16 @@
 	color: #E0F2F9;
 	text-align: center;
 	margin: 10% 0;
-}
+} */
+
+
 
 
 
 
 .footer {
     padding-block: 100px;
-    color: #1D1D1B;
+    color: #000000;
   }
   
   .footer__container {
