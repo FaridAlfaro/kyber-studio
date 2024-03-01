@@ -84,11 +84,11 @@ p{
 .bienvenida-links {
     position: absolute;
     right: 5%;
-    top: 40%;
+    top: 35%;
     display: flex;
     flex-direction: column;
     gap: 40px;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 500;
     letter-spacing: 3px;
 
@@ -228,7 +228,6 @@ p{
     width: 60vw;
     background-color: #efefef;
     color: #000;
-    border-left: 10px solid #000;
     position: absolute;
     top: 0;
     right: 0;
@@ -300,8 +299,14 @@ p{
     transition: ease-in-out .3s;
     opacity: 1;
 }
-
-.menu-nosotros{
+.menu-nosotros, .menu-servicios, .menu-trabajos, .menu-contacto{
+    opacity: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+/* .menu-nosotros{
     opacity: 0;
 }
 .menu-servicios{
@@ -318,5 +323,21 @@ p{
     opacity: 0;
     transition: ease-in-out 1s;
     
+} */
+
+
+.menu-content{
+    animation: fadeIn 2s ease
 }
 
+
+@keyframes fadeIn {
+    0%{
+      opacity: 0;
+      filter: blur(20px);
+    }
+    10%{
+      opacity: 1;
+      filter: brightness(2) blur(10px) grayscale(1);
+    }
+   }

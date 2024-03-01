@@ -1,72 +1,90 @@
-.nosotros-contenedor{
-  margin-top: 1%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: -100px;
-  width: 100%;
-  height: 100%;
-  
-}
+
 .nosotros-titulo{
  text-transform: uppercase;
   font-size: 8vh;
   font-weight: bold;
   transition: color all .3s;
-  margin: 0;
-  margin-left: -30%;
+  position: absolute;
+  top: -5%;
+  left: 10%;
 }
 .nosotros-titulo2{
+  background-image: url("/IMG/separador/Diseño\ sin\ título.gif");
+  background-size: cover;
   text-transform: uppercase;
    font-size: 8vh;
    font-weight: bold;
    transition: color all .3s;
-   margin: 0;
-   margin-left: 30%;
-   opacity: .5;
+   color: transparent;
+   position: absolute;
+   background-clip: text;
+   top: 4%;
+   left: 35%;
  }
+ 
  .nosotros-titulo3{
   text-transform: uppercase;
    font-size: 8vh;
    font-weight: bold;
    transition: color all .3s;
-   margin: 0;
-   margin-left: -20%;
+   position: absolute;
+   top: 12%;
+   left: 20%;
  }
  .nosotros-titulo4{
+  background-image: url("/IMG/separador/Diseño\ sin\ título.gif");
+  background-size: cover;
+  background-position-x: 20deg;
+  background-clip: text;
   text-transform: uppercase;
    font-size: 8vh;
    font-weight: bold;
-   transition: color all .3s;
-   margin: 0;
-   margin-left: 15%;
-   opacity: .5;
+   position: absolute;
+   top: 20%;
+   left: 35%;
+   color: transparent;
  }
  .nosotros-texto{
   width: 30%;
   position: absolute;
   bottom: 30%;
   left: 5%;
-  font-size: 30px;
+  font-size: 24px;
  }
  .nosotros-img{
-  background-image: url(/IMG/fotos/wallpaperflare.com_wallpaper.jpg);
-  background-position: center;
-  background-clip: border-box;
-  background-position-y: -50%;
-  background-size: cover;
   position: absolute;
   right: 3%;
   height: 30%;
   width: 50%;
   bottom: 4%;
   border-radius: 14px;
+  transition: fadeIn 3s ease;
  }
+
+@keyframes fadeIn {
+    0%{
+      opacity: 0;
+      filter: brightness(20px);
+    }
+    10%{
+      opacity: 1;
+      filter: brightness(2) blur(10px);
+    }
+   }
  .nosotros-boton{
   left: 5%;
   bottom: 25%;
-  font-size: 22px;
+  font-size: 17px;
+ }
+
+ .separador-nosotros{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  min-width: 4px;
+  min-height: 100vh;
+  background-color: #000000;
+  opacity: .5;
  }
 /* 
 

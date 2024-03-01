@@ -9,59 +9,52 @@ document.addEventListener('DOMContentLoaded', function () {
     const htmlBody = document.documentElement;
 
     closeBtn.addEventListener('click', function () {
-        // Ocultar los menús
-        menus.forEach(menu => {
-            menu.style.opacity = '0';
-            menu.style.display = 'none';
-            menuBienvenida.style.transform = 'translateX(60vw)';
-            bienvenida.style.transform = 'translateX(0)';
-            linkss.style.transform = 'translateX(0)';
-            header.style.display = '';
-            
-            // Habilitar el scroll
-            htmlBody.style.overflow = 'auto';
-        });
+      menus.forEach(menu => {
+        menu.style.opacity = '0';
+        menu.style.display = 'none';
+        menu.classList.remove('menu-content');
+        menuBienvenida.style.transform = 'translateX(60vw)';
+        bienvenida.style.transform = 'translateX(0)';
+        linkss.style.transform = 'translateX(0)';
+        header.style.display = '';
 
-        // Desplazar bienvenida y menuBienvenida a la derecha
-        // bienvenida.style.transform = 'translateX(0)';
-        // menuBienvenida.style.transform = 'translateX(60vw)';
+        htmlBody.style.overflow = 'auto';
+      });
     });
 
     links.forEach(link => {
-        link.addEventListener('click', function (event) {
-            event.preventDefault();
+      link.addEventListener('click', function (event) {
+        event.preventDefault();
 
-            // Ocultar los menús previos
-            menus.forEach(menu => {
-                menu.style.opacity = '0';
-                menu.style.display = 'none';
-            });
-
-            const targetMenuId = this.id.replace('menu', '').toLowerCase();
-            const targetMenu = document.querySelector(`.menu-${targetMenuId}`);
-
-            // Mostrar el menú correspondiente
-            targetMenu.style.display = 'block';
-            setTimeout(() => {
-                targetMenu.style.opacity = '1';
-            }, 10);
-            header.style.display = 'none';
-
-            // Desplazar bienvenida y menuBienvenida a la izquierda
-            bienvenida.style.transform = 'translateX(-60vw)';
-            menuBienvenida.style.transform = 'translateX(0)';
-            linkss.style.transform = 'translateX(-60vw)';
-
-            // Bloquear el scroll
-            htmlBody.style.overflow = 'hidden';
-
-            // Scroll automático solo si no está en la parte superior
-            if (window.scrollY !== 0) {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            }
+        menus.forEach(menu => {
+          menu.style.opacity = '0';
+          menu.style.display = 'none';
+          menu.classList.remove('menu-content');
         });
+
+        const targetMenuId = this.id.replace('menu', '').toLowerCase();
+        const targetMenu = document.querySelector(`.menu-${targetMenuId}`);
+
+        targetMenu.style.display = 'block';
+        header.style.display = 'none';
+
+        setTimeout(() => {
+          targetMenu.classList.add('menu-content');
+          targetMenu.style.opacity = '1';
+
+          bienvenida.style.transform = 'translateX(-60vw)';
+          menuBienvenida.style.transform = 'translateX(0)';
+          linkss.style.transform = 'translateX(-60vw)';
+
+          htmlBody.style.overflow = 'hidden';
+
+          if (window.scrollY !== 0) {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }
+        }, 10);
+      });
     });
-});
+  });
 
 
 document.addEventListener("DOMContentLoaded", function () {
