@@ -78,15 +78,15 @@
   font-size: 17px;
  }
 
- .separador-nosotros{
+ /* .separador-nosotros{
   position: absolute;
   bottom: 0;
   left: 0;
   min-width: 4px;
-  min-height: 100vh;
+  min-height: 200vh;
   background-color: #000000;
   opacity: .5;
- }
+ } */
 /* 
 
 .textos-titular-sub h2{
@@ -246,21 +246,23 @@
 
 
 .menu-servicios{
-  display: flex;
-  flex-direction: column;
-  margin: 0 5%;
+  /* display: flex;
+  flex-direction: column; */
   overflow-y: auto;
 }
 .servicios-servicio-contenedor{
   display: flex;
   flex-direction: column;
   width: 40vw;
+  margin-left: 5%;
 }
 .servicios-titular{
   font-size: 18px;
   font-weight: normal;
   width: 15vw;
-  margin-bottom: 10vh;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  font-family: "IBM Plex Serif", serif;
 }
 .servicios-indice{
   font-size: 30px;
@@ -269,7 +271,7 @@
   padding: 0;
 }
 .servicio-titulo{
-  background-image: url("/IMG/separador/Diseño\ sin\ título.gif");
+  background-image: url("/IMG/separador/Diseño-sin-título-_2_.gif");
   background-size: cover;
   text-transform: uppercase;
   font-size: 6vh;
@@ -278,24 +280,77 @@
   color: transparent;
   background-clip: text;
   margin: 0;
+  margin-left: 10%;
   padding: 0;
 }
 .serivcios-texto{
   font-size: 20px;
-  margin-left: 2%;
+  margin-left: 10%;
 }
 .servicios-alternativa{
   font-size: 18px;
-  border: #000000 1px solid;
-  padding: 5px 10px;
-  border-radius: 50px 50px 50px 50px;
+  padding-bottom: 3.14px;
+  border-bottom: #000000 1px solid;
+  /* padding: 5px 10px; */
+  /* border-radius: 50px 50px 50px 50px; */
 }
-.servicios-boton{
-  margin: 2% 0 5% 2%;
-}
+
+
 .servicios-alternativas{
   display: flex;
   flex-direction: row;
   gap: 20px;
-  margin-left: 2%;
+  margin-left: 10%;
+  margin-bottom: 20%;
+}
+
+.servicios-boton{
+  margin: -5% 0 5% 12%;
+}
+.servicios-boton {
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 14px 0;
+  text-decoration: none;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: bold;
+  letter-spacing: 2px;
+  opacity: 0.4;
+  text-transform: uppercase;
+  position: relative; /* Agrega esta línea para establecer un contexto de posición para los pseudo-elementos */
+}
+
+.servicios-boton::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #000;
+  transition: width 0.3s ease;
+}
+
+.servicios-boton:hover::before {
+  width: 265px;
+}
+
+.servicios-boton::after {
+  content: "➢";
+  scale: 1;
+  position: relative; /* Cambia relative a absolute */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  margin-left: 100px;
+}
+
+.servicios-boton:hover::after {
+  opacity: 1;
+}
+
+.servicios-boton:hover {
+  transition: ease-in-out 0.3s;
+  opacity: 1;
 }

@@ -1,54 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            margin: 0;
-            overflow: hidden;
-        }
-
-        #wormholeContainer {
-            width: 100vw;
-            height: 40vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: black;
-        }
-
-        #wormhole {
-            width: 150px;
-            height: 150px;
-        }
-
-        #entryCircle, #exitCircle {
-            fill: none;
-            stroke: white;
-            stroke-width: 2;
-            animation: pulse 1.5s ease-in-out infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% {
-                r: 15;
-            }
-            50% {
-                r: 20;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="pruebas.css">
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+  <title>Model Viewer Scroll</title>
 </head>
 <body>
-    <div id="wormholeContainer">
-        <svg id="wormhole" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <!-- Entry Circle -->
-            <circle id="entryCircle" cx="30" cy="50" r="15"/>
-            
-            <!-- Exit Circle -->
-            <circle id="exitCircle" cx="70" cy="50" r="15"/>
-        </svg>
-    </div>
+    <model-viewer id="orbit-demo" class="modelo-3d" interpolation-decay="200" src="/IMG/separador/uploads_files_4398657_Планета19.glb" alt="A 3D model of an astronaut"></model-viewer>
+    <script>
+    (() => {
+      const modelViewer = document.querySelector('#orbit-demo');
+      const orbitCycle = [
+        '45deg 55deg 4m',
+        '-60deg 110deg 2m',
+        modelViewer.cameraOrbit
+      ];
+    
+      setInterval(() => {
+        const currentOrbitIndex = orbitCycle.indexOf(modelViewer.cameraOrbit);
+        modelViewer.cameraOrbit =
+            orbitCycle[(currentOrbitIndex + 1) % orbitCycle.length];
+      }, 1000);
+    })();
+    </script>
 </body>
 </html>
