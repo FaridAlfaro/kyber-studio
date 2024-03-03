@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
           menuBienvenida.style.transform = 'translateX(0)';
           linkss.style.transform = 'translateX(-60vw)';
 
-          htmlBody.style.overflow = 'hidden';
+          // htmlBody.style.overflow = 'hidden';
 
           if (window.scrollY !== 0) {
             window.scrollTo({ top: 0, behavior: 'smooth' });

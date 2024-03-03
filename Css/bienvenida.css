@@ -10,12 +10,9 @@ html, body {
 }
 h1, h2, h3, h4, h5, h6{
     font-family: "IBM Plex Sans", sans-serif;
-    font-weight: 100;
-    font-style: normal;
 }
 p{
     font-family: "IBM Plex Serif", serif;
-    font-weight: normal;
 }
 .cursor {
     width: 20px;
@@ -261,7 +258,6 @@ p{
     font-family: "IBM Plex Sans", sans-serif;
     font-weight: bold;
     letter-spacing: 2px;
-    position: absolute;
     opacity: .4;
     text-transform: uppercase;
     
@@ -301,7 +297,7 @@ p{
 }
 .menu-nosotros, .menu-servicios, .menu-trabajos, .menu-contacto{
     opacity: 0;
-    width: 100%;
+    min-width: 60vw;
     display: flex;
     flex-direction: column;
     height: 100%;
