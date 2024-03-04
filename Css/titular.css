@@ -489,3 +489,87 @@
   transition: ease-in-out 0.3s;
   opacity: 1;
 }
+
+
+.contacto-contenedor{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  width: 100%;
+  height: 100vh;
+  margin-left: 5%;
+  justify-items: start;
+  align-items: center;
+  align-content: center;
+ }
+.gif-contacto{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 20%;
+  object-fit: cover;
+}
+.contacto-logo{
+  height: 10vh;
+  margin: 0 0 10% 0;
+  padding: 0;
+  width: fit-content;
+}
+.contacto-logo:hover{
+  transition: ease .3s;
+  filter: hue(60deg );
+}
+.contacto-numero{
+  font-size: 2vh;
+  color: #000;
+  cursor: pointer;
+}
+.contacto-numero:hover{
+  transition: ease .3s;
+  background-image: url(/IMG/separador/Diseño-sin-título-_2_.gif);
+  color: transparent;
+  background-clip: text;
+  object-fit: contain;
+  filter: saturate(1.5);
+}
+ ul {
+  display: flex;
+  flex-direction: column;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  margin: 0 10px;
+  text-decoration: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+
+ul li a .icon {
+  position: relative;
+  color: #262626;
+  transition: .5s;
+  z-index: 3;
+}
+
+ul li a:hover .icon {
+  color: #efefef;
+}
+
+
+ul li a:hover {
+  top: 0;
+  transition: ease 1s;
+  border-radius: 10%;
+  background: #000;
+}
+

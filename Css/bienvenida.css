@@ -81,16 +81,15 @@ p{
 .bienvenida-links {
     position: absolute;
     right: 5%;
-    top: 35%;
+    top: calc(50% - 120px);
+    height: 100px;
     display: flex;
     flex-direction: column;
     gap: 40px;
     font-size: 25px;
     font-weight: 500;
     letter-spacing: 3px;
-
 }
-
 .bienvenida-link {
     text-decoration: none;
     color: #000000;
@@ -342,28 +341,5 @@ p{
     }
    }
 
-#contenedor-scroll {
-    position: absolute;
-    right: 0;
-    bottom: 2%;
-  }
 
-#scrollMensaje {
-    display: inline-block;
-    background-color: #3498db;
-    color: #fff;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    animation: animacionScroll 1.5s infinite alternate;
-  }
-
-  @keyframes animacionScroll {
-    from {
-      transform: translateY(0);
-    }
-    to {
-      transform: translateY(10px);
-    }
-  }
    
