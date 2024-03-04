@@ -301,7 +301,6 @@ p{
     opacity: 0;
     min-width: 60vw;
     display: flex;
-    flex-direction: column;
     height: 100%;
 }
 /* .menu-nosotros{
@@ -338,4 +337,16 @@ p{
       opacity: 1;
       filter: brightness(2) blur(10px) grayscale(1);
     }
+   }
+
+
+   .menu-trabajos{
+    position: relative;
+    flex-direction: row;
+    max-height: 100vh;
+    width: 60vw;
+   }
+   .trabajos-video{
+    height: 100vh;
+    box-sizing: border-box;
    }

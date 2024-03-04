@@ -249,12 +249,17 @@
   /* display: flex;
   flex-direction: column; */
   overflow-y: auto;
+  margin-bottom: 10%;
 }
 .servicios-servicio-contenedor{
   display: flex;
   flex-direction: column;
   width: 40vw;
   margin-left: 5%;
+  margin-bottom: 15%;
+  animation: desvanecer linear both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 35%;
 }
 .servicios-titular{
   font-size: 18px;
@@ -282,6 +287,36 @@
   margin: 0;
   margin-left: 10%;
   padding: 0;
+  animation: pintar linear both;
+  animation-timeline: view();
+  animation-range: entry 45% cover 55%;
+  animation-delay: 6s;
+}
+@keyframes desvanecer {
+  from {
+    opacity: 0;
+    filter: blur(20px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes pintar {
+  0% {
+    filter: grayscale(1)
+  }
+  80%{
+    filter: grayscale(.9);
+  }
+  90% {
+    filter: grayscale(.7) saturate(2) brightness(1.8);
+  }
+  95% {
+    filter: grayscale(.5) saturate(1.5) brightness(1.5);
+  }
+  100% {
+    filter: grayscale(0) saturate(1) brightness(1);
+  }
 }
 .serivcios-texto{
   font-size: 20px;
@@ -305,7 +340,7 @@
 }
 
 .servicios-boton{
-  margin: -5% 0 5% 12%;
+  margin: -15% 0 0 12%;
 }
 .servicios-boton {
   color: #000;
@@ -354,3 +389,23 @@
   transition: ease-in-out 0.3s;
   opacity: 1;
 }
+
+
+.menu-trabajos{
+  position: relative;
+  flex-direction: row;
+  max-height: 100vh;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+ }
+ .trabajos-video{
+  height: 100vh;
+  box-sizing: border-box;
+ }
+
+ .trabajos-titulo{
+  color: red;
+  position: absolute;
+  right: 0;
+ }
