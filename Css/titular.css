@@ -177,7 +177,7 @@
   }
   
   .imgFooter{
-    color: #F8FAFA;
+    color: #efefef;
     width: 10vw;
   }
   
@@ -391,21 +391,101 @@
 }
 
 
-.menu-trabajos{
+.trabajos-contenedor{
   position: relative;
-  flex-direction: row;
+  display: flex;
+  flex-direction: row-reverse;
   max-height: 100vh;
   width: 100%;
-  flex-wrap: wrap;
-  justify-content: flex-end;
  }
  .trabajos-video{
   height: 100vh;
+  width: auto;
   box-sizing: border-box;
  }
 
- .trabajos-titulo{
-  color: red;
-  position: absolute;
-  right: 0;
+ .trabajos-textos{
+  margin: 10% 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  height: 100vh;
  }
+
+
+.trabajos-titular{
+  font-size: 2vh;
+  font-family: sans-serif;
+  margin: -8% 0;
+  padding: 0;
+  font-weight: bold;
+  text-transform: uppercase;
+  opacity: .3;
+
+}
+.trabajos-titulo{
+  font-size: 6vh;
+  text-transform: uppercase;
+  background-image: url(/IMG/separador/Diseño-sin-título-_2_.gif);
+  background-clip: text;
+  color: transparent;
+ }
+
+ .trabajos-texto{
+  width: 70%;
+  font-size: 20px;
+ }
+ .trabajos-mensaje{
+  width: 70%;
+  font-size: 20px;
+  background-image: url(/IMG/separador/Diseño-sin-título-_2_.gif);
+  color: transparent;
+  font-weight: bold;
+  background-clip: text;
+}
+
+ .trabajos-boton {
+  color: #000;
+  position: absolute;
+  bottom: 5%;
+  padding: 14px 0;
+  text-decoration: none;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: bold;
+  letter-spacing: 2px;
+  opacity: 0.4;
+  text-transform: uppercase;
+}
+
+.trabajos-boton::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #000;
+  transition: width 0.3s ease;
+}
+
+.trabajos-boton:hover::before {
+  width: 100%;
+}
+
+.trabajos-boton::after {
+  content: "➢";
+  scale: 1;
+  position: relative; /* Cambia relative a absolute */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  margin-left: 100px;
+}
+
+.trabajos-boton:hover::after {
+  opacity: 1;
+}
+
+.trabajos-boton:hover {
+  transition: ease-in-out 0.3s;
+  opacity: 1;
+}
