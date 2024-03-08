@@ -72,7 +72,8 @@ p{
     font-weight: bold;
 }
 .peregrino-logo{
-    height: 10vw;
+    height: 20vw;
+    width: 400px;
     margin-left: 5%;
     margin-top: 5%;
 }
@@ -110,7 +111,7 @@ p{
 }
 
 .bienvenida-link:hover::before {
-    width: 198%
+    width: calc(100% + 20px)
 }
 
 .bienvenida-link::after {
