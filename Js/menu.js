@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
       menuBienvenida.style.transform = 'translateX(100vw)';
       bienvenida.style.transform = 'translateX(0)';
       linkss.style.transform = 'translateX(0)';
-      htmlBody.style.overflow = 'auto';
+      htmlBody.style.overflow = 'hidden';
     });
   }
 

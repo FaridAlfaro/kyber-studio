@@ -259,11 +259,6 @@ p{
 
 
    @media(max-width: 990px){
-    html, body{
-        width: 100vw;
-        height: 100vh;
-        overflow: hidden !important;
-    }
     .menu-bienvenida {
         width: 100vw;
         transform: translateX(100vw);
