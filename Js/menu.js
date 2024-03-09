@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const linkss = document.querySelector('.bienvenida-links');
   const closeBtn = document.querySelector('.close-btn');
   const menus = document.querySelectorAll('.menu-bienvenida > div');
-  const htmlBody = document.documentElement;
   var anchoPantalla = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
   // Función para restablecer el estado inicial
@@ -17,7 +16,6 @@ document.addEventListener('DOMContentLoaded', function () {
       menuBienvenida.style.transform = 'translateX(100vw)';
       bienvenida.style.transform = 'translateX(0)';
       linkss.style.transform = 'translateX(0)';
-      htmlBody.style.overflow = 'hidden';
     });
   }
 
