@@ -3,6 +3,7 @@ html, body {
     padding: 0%;
     width: 100%;
     background: #efefef;
+    max-height: 100vh;
     max-width: 100vw !important;
     overflow-x: hidden !important;
     overflow-y: hidden !important;
@@ -258,7 +259,13 @@ p{
 
 
    @media(max-width: 990px){
-    
+    html, body{
+        width: 100%;
+        height: 100%;
+        max-width: 100vw !important;
+        overflow-x: hidden !important;
+        overflow-y: hidden !important;
+    }
     .menu-bienvenida {
         width: 100vw;
         transform: translateX(100vw);
