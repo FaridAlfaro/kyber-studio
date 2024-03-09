@@ -269,6 +269,8 @@ p{
     }
     .menu-bienvenida {
         width: 100vw;
+        height: 100vh;
+        overflow: hidden !important;
         transform: translateX(100vw);
         border: none;
         /* right: 10%;
