@@ -31,7 +31,7 @@ p{
 
 .bienvenida{
     height: 100vh;
-    font-size: 28px;
+    font-size: clamp(14px, 3vw, 28px);
     width: 100vw;
     min-height: 100vh;
     display: flex;
@@ -40,11 +40,10 @@ p{
     justify-content:space-between;
     color: #000000;
     background-color: #efefef;
-    margin-bottom: 200px;
 }
 .bienvenida-textos{
     margin-left: 5%;
-    margin-bottom: 1%;
+    margin-bottom: 2%;
 }
 
 .bienvenida-titulo{
@@ -54,12 +53,14 @@ p{
     margin: 0;
 }
 .bienvenida-hello{
+    margin: 0;
     margin-bottom: 1em;
     font-family: "IBM Plex Serif", serif;
     font-weight: normal;
     font-style: normal;
 }
 .bienvenida-since{
+    margin: 0;
     margin-top: 1em;
     font-size: .8em;
     font-family: "IBM Plex Serif", serif;
@@ -72,10 +73,10 @@ p{
     font-weight: bold;
 }
 .peregrino-logo{
-    height: 20vw;
-    width: 400px;
+    height: 11%;
+    width: auto;
     margin-left: 5%;
-    margin-top: 5%;
+    margin-top: 2%;
 }
 
 
@@ -83,11 +84,10 @@ p{
     position: absolute;
     right: 5%;
     top: calc(50% - 120px);
-    height: 100px;
     display: flex;
     flex-direction: column;
-    gap: 40px;
-    font-size: 25px;
+    font-size: clamp(14px, 3vw, 25px);
+    gap: clamp(14px, 3vh, 40px);
     font-weight: 500;
     letter-spacing: 3px;
 }
@@ -111,7 +111,7 @@ p{
 }
 
 .bienvenida-link:hover::before {
-    width: calc(100% + 20px)
+    width: calc(100% + 1vw);
 }
 
 .bienvenida-link::after {
@@ -132,93 +132,6 @@ p{
     transition: ease-in-out 1s;
 }
 
-
-@media(max-width: 990px){
-    .peregrino-logo{
-        width: 70vw;
-        position: absolute;
-        top: 30%;
-        left: 5%;
-    }
-    .bienvenida{
-        font-size: 18px;
-        height: 90vh;
-    }
-    .bienvenida-titulo{
-        width: 80%;
-    }
-    .bienvenida-flechas-1, .bienvenida-flechas-2, .bienvenida-flechas-3, .bienvenida-flechas-4 {
-        height: 7vh;
-        position: absolute;
-    
-    }
-    .bienvenida-flechas-1{
-        top: 14%;
-        right: 6%;
-    }
-    
-    .bienvenida-flechas-2{
-        top: calc(14% + 6vh);
-        right: 6%;
-    }
-    
-    .bienvenida-flechas-3{
-        top: calc(14% + 12vh);
-        right: 6%;
-    }
-    .bienvenida-flechas-4 {
-        top: calc(14% + 18vh);
-        right: 6%;
-    }
-    .bienvenida-links {
-        position: absolute;
-        right: 10%;
-        top: 7%;
-        display: flex;
-        flex-direction: column;
-        gap: 14px;
-        z-index: 999999;
-    }
-    
-    .bienvenida-link {
-        text-decoration: none;
-        color: #efefef;
-        position: relative;
-    }
-    
-    .bienvenida-link::before {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 0;
-        height: 2px;
-        background-color: #efefef;
-        transition: width 0.3s ease;
-    }
-    
-    .bienvenida-link:hover::before {
-        width: 100%;
-    }
-    
-    .bienvenida-link::after {
-        content: "➢";
-        scale: .7;
-        position: absolute;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-        margin-left: 5px;
-    }
-    
-    .bienvenida-link:hover::after {
-        opacity: 1;
-    }
-    
-    .bienvenida-link:hover {
-        transition: ease-in-out 1s;
-    }
-    
-}
 
 .menu-bienvenida{
     border-left: 5px solid #000;
@@ -343,4 +256,37 @@ p{
    }
 
 
-   
+
+   @media(max-width: 990px){
+    
+    .menu-bienvenida {
+        width: 100vw;
+        transform: translateX(100vw);
+        border: none;
+        /* right: 10%;
+        top: 7%;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        z-index: 999999; */ 
+    }
+    
+    .bienvenida-links:hover::before {
+        display: none;
+        
+    }
+    .bienvenida-links:hover::after {
+        display: none;
+    }
+    /* 
+    .bienvenida-link {
+        color: #efefef;
+    }
+    
+    .bienvenida-link::before {
+        background-color:#efefef;
+    } */
+    
+    
+    
+}

@@ -6,18 +6,29 @@ document.addEventListener('DOMContentLoaded', function () {
   const closeBtn = document.querySelector('.close-btn');
   const menus = document.querySelectorAll('.menu-bienvenida > div');
   const htmlBody = document.documentElement;
+  var anchoPantalla = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
-  closeBtn.addEventListener('click', function () {
+  // Función para restablecer el estado inicial
+  function resetInitialState() {
     menus.forEach(menu => {
       menu.style.opacity = '0';
       menu.style.display = 'none';
       menu.classList.remove('menu-content');
-      menuBienvenida.style.transform = 'translateX(60vw)';
+      menuBienvenida.style.transform = 'translateX(100vw)';
       bienvenida.style.transform = 'translateX(0)';
       linkss.style.transform = 'translateX(0)';
-
       htmlBody.style.overflow = 'auto';
     });
+  }
+
+  // Evento al hacer clic en el botón cerrar
+  closeBtn.addEventListener('click', function () {
+    resetInitialState();
+  });
+
+  // Evento al cargar la página
+  window.addEventListener('beforeunload', function () {
+    resetInitialState();
   });
 
   links.forEach(link => {
@@ -39,9 +50,16 @@ document.addEventListener('DOMContentLoaded', function () {
         targetMenu.classList.add('menu-content');
         targetMenu.style.opacity = '1';
 
-        bienvenida.style.transform = 'translateX(-60vw)';
-        menuBienvenida.style.transform = 'translateX(0)';
-        linkss.style.transform = 'translateX(-60vw)';
+        if (anchoPantalla < 990) {
+          bienvenida.style.transform = 'translateX(-100vw)';
+          menuBienvenida.style.transform = 'translateX(0)'
+          linkss.style.transform = 'translateX(-100vw)';
+        }
+        else{
+          bienvenida.style.transform = 'translateX(-60vw)';
+          menuBienvenida.style.transform = 'translateX(0)';
+          linkss.style.transform = 'translateX(-60vw)';
+        }
 
         if (window.scrollY !== 0) {
           window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -52,15 +70,15 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    const cursor = document.createElement("div");
-    cursor.className = "cursor";
-    document.body.appendChild(cursor);
+  const cursor = document.createElement("div");
+  cursor.className = "cursor";
+  document.body.appendChild(cursor);
 
-    document.addEventListener("mousemove", function (e) {
-      const x = e.clientX;
-      const y = e.clientY;
+  document.addEventListener("mousemove", function (e) {
+    const x = e.clientX;
+    const y = e.clientY;
 
-      cursor.style.left = x + "px";
-      cursor.style.top = y + "px";
-    });
+    cursor.style.left = x + "px";
+    cursor.style.top = y + "px";
   });
+});

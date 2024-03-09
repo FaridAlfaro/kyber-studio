@@ -1,7 +1,7 @@
 
 .nosotros-titulo{
  text-transform: uppercase;
-  font-size: 8vh;
+ font-size: 4vw;
   font-weight: bold;
   transition: color all .3s;
   position: absolute;
@@ -12,20 +12,20 @@
   background-image: url("/IMG/separador/Diseño\ sin\ título.gif");
   background-size: cover;
   text-transform: uppercase;
-   font-size: 8vh;
-   font-weight: bold;
+  font-size: 4vw;
+  font-weight: bold;
    transition: color all .3s;
    color: transparent;
    position: absolute;
    background-clip: text;
    top: 4%;
-   left: 35%;
+   left: 28%;
  }
  
  .nosotros-titulo3{
   text-transform: uppercase;
-   font-size: 8vh;
-   font-weight: bold;
+  font-size: 4vw;
+  font-weight: bold;
    transition: color all .3s;
    position: absolute;
    top: 12%;
@@ -37,19 +37,21 @@
   background-position-x: 20deg;
   background-clip: text;
   text-transform: uppercase;
-   font-size: 8vh;
-   font-weight: bold;
+  font-size: 4vw;
+  font-weight: bold;
    position: absolute;
    top: 20%;
-   left: 35%;
+   left: 28%;
    color: transparent;
  }
  .nosotros-texto{
-  width: 30%;
+  height: fit-content;
+  width: calc(100vw/2);
+  max-width: 350px;
   position: absolute;
   bottom: 30%;
   left: 5%;
-  font-size: 24px;
+  font-size: clamp(14px, 3vw, 24px);
  }
  .nosotros-img{
   position: absolute;
@@ -190,7 +192,7 @@
     font-size: 14px;
   }
   
-  
+/*   
   @media screen and (min-width: 40em) {
     .company__info {
       grid-column: span 2;
@@ -240,7 +242,7 @@
     .cards-title{
       margin: 0;
     }
-}
+} */
 
 
 
@@ -254,7 +256,8 @@
 .servicios-servicio-contenedor{
   display: flex;
   flex-direction: column;
-  width: 40vw;
+  width: 100%;
+  max-width: 800px;
   margin-left: 5%;
   margin-bottom: 15%;
   animation: desvanecer linear both;
@@ -262,15 +265,17 @@
   animation-range: entry 20% cover 35%;
 }
 .servicios-titular{
-  font-size: 18px;
+  font-size: clamp(12px, 3vw, 18px);
   font-weight: normal;
-  width: 15vw;
+  height: fit-content;
+  width: calc(100vw/2);
+  max-width: 300px;
   margin-top: 10%;
   margin-bottom: 10%;
   font-family: "IBM Plex Serif", serif;
 }
 .servicios-indice{
-  font-size: 30px;
+  font-size: clamp(30px, 3vw, 40px);
   font-weight: bold;
   opacity: .2;
   padding: 0;
@@ -292,6 +297,7 @@
   animation-range: entry 45% cover 55%;
   animation-delay: 6s;
 }
+
 @keyframes desvanecer {
   from {
     opacity: 0;
@@ -319,11 +325,11 @@
   }
 }
 .serivcios-texto{
-  font-size: 20px;
+  font-size: clamp(14px, 2.1vh, 20px);
   margin-left: 10%;
 }
 .servicios-alternativa{
-  font-size: 18px;
+  font-size: clamp(12px, 3vw, 18px);
   padding-bottom: 3.14px;
   border-bottom: #000000 1px solid;
   /* padding: 5px 10px; */
@@ -573,3 +579,59 @@ ul li a:hover {
   background: #000;
 }
 
+@media(max-width: 700px){
+  .menu-servicios{
+    width: 100vw;
+  }
+  .servicio-titulo{
+    font-size: 4vh;
+  }
+  .serivcios-texto{
+    font-size: 14px;
+    width: 80%;
+  }
+  .servicios-servicio-contenedor{
+    margin: 0;
+    margin-left: 3%;
+    margin-bottom: 50%;
+  }
+  .servicios-boton{
+    margin: 0;
+    margin-left: 13%;
+  }
+  .trabajos-contenedor{
+    width: 100vw;
+    flex-direction: column;
+    overflow-y: auto;
+  }
+  .trabajos-titulo{
+    font-size: 4vh;
+    
+  }
+  .trabajos-titular{
+    font-size: 11px;
+    margin-top: 50px;
+  }
+  .trabajos-texto{
+    font-size: 14px;
+    width: 100%;
+  }
+  .trabajos-mensaje{
+    font-size: 15px;
+  }
+  .servicios-boton{
+    margin: 0;
+    margin-left: 13%;
+  }
+  .trabajos-boton{
+    bottom: -100%;
+    font-size: 14px;
+    width: 100%;
+  }
+  .trabajos-boton::after {
+    margin-left: 10%;
+  }
+  .trabajos-boton:hover::before {
+    width: 80%;
+  }
+}
