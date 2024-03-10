@@ -26,7 +26,7 @@ p{
     transition: transform 0.1s ease;
 }
 .bienvenida{
-    height: 100vh;
+    height: 100%;
     font-size: clamp(14px, 3vw, 28px);
     width: 100vw;
     min-height: 100vh;
@@ -69,7 +69,7 @@ p{
     font-weight: bold;
 }
 .peregrino-logo{
-    height: 11%;
+    height: 11vh;
     width: auto;
     margin-left: 5%;
     margin-top: 2%;
