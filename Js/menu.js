@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
       menuBienvenida.style.transform = 'translateX(100vw)';
       bienvenida.style.transform = 'translateX(0)';
       linkss.style.transform = 'translateX(0)';
+      menuBienvenida.style.display = 'none'
     });
   }
 
@@ -27,12 +28,14 @@ document.addEventListener('DOMContentLoaded', function () {
   // Evento al cargar la página
   window.addEventListener('beforeunload', function () {
     resetInitialState();
+    menuBienvenida.style.display = 'none'
   });
 
   links.forEach(link => {
     link.addEventListener('click', function (event) {
       event.preventDefault();
       menus.forEach(menu => {
+        menuBienvenida.style.display = 'none'
         menu.style.opacity = '0';
         menu.style.display = 'none';
         menu.classList.remove('menu-content');
@@ -49,10 +52,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (anchoPantalla < 990) {
           bienvenida.style.transform = 'translateX(-100vw)';
+          menuBienvenida.style.display = 'flex'
           menuBienvenida.style.transform = 'translateX(0)'
           linkss.style.transform = 'translateX(-100vw)';
         }
         else{
+          menuBienvenida.style.display = 'flex'
           bienvenida.style.transform = 'translateX(-60vw)';
           menuBienvenida.style.transform = 'translateX(0)';
           linkss.style.transform = 'translateX(-60vw)';
