@@ -32,7 +32,6 @@ document.addEventListener('DOMContentLoaded', function () {
   links.forEach(link => {
     link.addEventListener('click', function (event) {
       event.preventDefault();
-
       menus.forEach(menu => {
         menu.style.opacity = '0';
         menu.style.display = 'none';

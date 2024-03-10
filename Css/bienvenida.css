@@ -8,6 +8,7 @@ html, body {
     overflow-y: hidden !important;
     cursor: none;
 }
+
 h1, h2, h3, h4, h5, h6{
     font-family: "IBM Plex Sans", sans-serif;
 }
@@ -24,24 +25,17 @@ p{
     transform: translate(-50%, -50%);
     transition: transform 0.1s ease;
 }
-.content-container{
-    overflow-x: hidden;
-    max-width: 100vw;
-}
-
 .bienvenida{
-    height: 100%;
+    height: 100vh;
     font-size: clamp(14px, 3vw, 28px);
-    width: 100%;
-    min-height: 90vh;
-    min-width: 90vw;
+    width: 100vw;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content:space-between;
     color: #000000;
     background-color: #efefef;
-    overflow: hidden;
 }
 .bienvenida-textos{
     margin-left: 5%;
